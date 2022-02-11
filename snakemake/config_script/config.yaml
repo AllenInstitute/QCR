@@ -1,0 +1,15 @@
+samples:
+ 	 
+	 H2033038_labelled :
+	 H2133020_labelled :
+workdir:
+reference:
+resolution:
+ref_subclass:
+ref_class:
+sample_id:
+donor:
+exclude:
+glia_cutoff:
+neuron_cutoff:
+ref_subclass_color:

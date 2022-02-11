@@ -1,0 +1,5 @@
+The shell script creates the template for config file. The values can be filled in by the user. A default config file is given as an example.
+
+To run:
+
+sh config_yaml.sh /allen/programs/celltypes/workgroups/hct/SEA-AD/RNAseq/QCR/seurat/data/ > config.yaml

@@ -1,0 +1,19 @@
+Steps:
+1. The data should be available as seurat/data/*_labelled.RDS 
+##CMD: snakemake -np --use-conda --cores 30 (dry run)
+##CMD: snakemake -p  --use-conda --cores 30 (actual run)
+2. It can run either a list of single objects/integrated objects
+3. Config file must be edited before starting the run
+
+Improvemnts to make::
+
+Write out sample_id, along with QCs as a ? (some flavor of h5 file- feather)
+Add the clustering to QC (resoltution good for now)
+instead of class class_seurat
+glia and neuron names inn ref to be explicitly checked: Apart from default get username
+
+1. Conda pacakges yaml can be added in env to make it portable after testing
+2. Can give only the same cutoff for top and bottom but that can be variable between glia and neuron
+3. silence lib messages
+4. The filtered, clustered and QCed objects are saved separately for tweaking the different steps individually. Can be combined as well
+5. Plots are kept separately as well
