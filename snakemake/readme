@@ -7,8 +7,6 @@ Steps:
 
 Improvemnts to make::
 
-Write out sample_id, along with QCs as a ? (some flavor of h5 file- feather)
-Add the clustering to QC (resoltution good for now)
 instead of class class_seurat
 glia and neuron names inn ref to be explicitly checked: Apart from default get username
 
