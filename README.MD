@@ -11,6 +11,7 @@ Input for this step includes a seurat object and reference data set from which c
 
 Example:
 ```
+Usage: Rscript <normalize_and_label_transfer_script> <work-dir location> <seurat-object in RDS/Rdata> <reference-obj in RDS/Rdata>
 Rscript ./seurat/scripts/normalize_and_label_transfer_objects.R /allen/programs/celltypes/workgroups/hct/SEA-AD/RNAseq/QCR/seurat/ ./seurat/data/H2033038.RData /allen/programs/celltypes/workgroups/rnaseqanalysis/sarojaS/210426_QCR/data/reference_subset.RDS
 ```
 
@@ -20,6 +21,8 @@ This happens using Snakemake which take the Seurat object as input and adds seve
 
 Example:
 ```
+
+Usage: sh <config_file_maker.sh> <path to *.RDS seurat data>
 sh ./snakemake/config_script/config_yaml.sh /allen/programs/celltypes/workgroups/hct/SEA-AD/RNAseq/QCR/seurat/data/ > config.yaml
 Fill in config file values
 snakemake -np --use-conda --cores 30 (dry run)
