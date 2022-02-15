@@ -19,7 +19,7 @@ Usage: Rscript <normalize_and_label_transfer_script> <work-dir location> <seurat
 Example: Rscript ./seurat/scripts/normalize_and_label_transfer_objects.R /allen/programs/celltypes/workgroups/hct/SEA-AD/RNAseq/QCR/seurat/ ./seurat/data/H2033038.RData /allen/programs/celltypes/workgroups/rnaseqanalysis/sarojaS/210426_QCR/data/reference_subset.RDS
 ```
 
-## Automated workflow:
+## Automated QC:
 
 Snakemake workflow which take the normalized and label transferred seurat object as input and adds several automated QC flags to the metadata of the Seurat object at cell and metacell (group of cells using Louvain clustering in Seurat) level.
 
@@ -41,7 +41,7 @@ Note: example config file with default values for all keys except samples, workd
 4. snakemake -p  --use-conda --cores 30 (actual run)
 ```
 
-## Interactive workflow:
+## Interactive QC:
 
 Shiny app for visualizing the UMAPs and scatter plots from Snakemake workflow, and also add user defined flags to cells in the Seurat object by brushing
 
