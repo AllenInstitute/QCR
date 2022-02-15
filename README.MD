@@ -2,7 +2,7 @@
 
 ## Quality Control for scRNA-seq data
 
-QCR is a workflow for adding several quality flags to scRNA-seq cells or nuceli which can later be used for downstream processing. It consists of three parts, pre-processing, automated workflow and interactive workflow.
+QCR is a workflow for adding several quality flags to scRNA-seq cells or nuclei which can later be used for downstream processing. It consists of three parts, pre-processing, automated workflow and interactive workflow.
 
 ## Pre-processing:
 
