@@ -1,11 +1,9 @@
 Notes:
 1. First step is label transfer for all objects. Seurat objects should not have "." in the name except in the suffix. It can be RDS or Rdata
 2. Jobs for labels transfer can be submitted using SLURM or in hct servers (using screen for example)
-##CMD: Rscript ./scripts/normalize_and_label_transfer_objects.R /allen/programs/celltypes/workgroups/hct/SEA-AD/RNAseq/QCR/seurat/ ./data/H2033038.RData /allen/programs/celltypes/workgroups/rnaseqanalysis/sarojaS/210426_QCR/data/reference_subset.RDS
-##CMD: Rscript scripts/integrate_seurat_objects.R "/allen/programs/celltypes/workgroups/hct/SEA-AD/RNAseq/QCR/seurat" "./data/" "./data/Seurat_integrated_object_1.RDS"
 3. We give these outside snakemake as it is much faster when submitted to hpc
 
-Improvements possible:
-1. We can add error statements to catch of input is not right
-2. We can take column names as input to functions
+Improvements coming soon:
+1. Error statements to catch of input is not right
+2. Column names as input to functions
 

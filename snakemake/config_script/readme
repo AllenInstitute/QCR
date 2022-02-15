@@ -2,4 +2,5 @@ The shell script creates the template for config file. The values can be filled 
 
 To run:
 
+Usage: sh config_yaml.sh <path to *.RDS normalized and labelled seurat data> > config.yaml
 sh config_yaml.sh /allen/programs/celltypes/workgroups/hct/SEA-AD/RNAseq/QCR/seurat/data/ > config.yaml

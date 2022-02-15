@@ -1,22 +1,42 @@
+# list of sample keys and values
 samples:
-    H2033038: H2033038 
-    H2133020: H2133020
+#    H2033038: H2033038 
+#    H2133020: H2133020
 
-workdir:   "/allen/programs/celltypes/workgroups/hct/SEA-AD/RNAseq/QCR/snakemake"
+# workdir absolute path
+workdir:   
+#"/allen/programs/celltypes/workgroups/hct/SEA-AD/RNAseq/QCR/snakemake"
 
-reference: "/allen/programs/celltypes/workgroups/rnaseqanalysis/sarojaS/210426_QCR/data/reference_subset.RDS"  
+# reference dataset absolute path
+reference: 
+#"/allen/programs/celltypes/workgroups/rnaseqanalysis/sarojaS/210426_QCR/data/reference_subset.RDS"  
 
 # For rule clustering:
+# Resolution for Seurat clustering (https://satijalab.org/seurat/articles/pbmc3k_tutorial.html#cluster-the-cells-1)
 resolution: "10" 
 
 # For QC_flags:
+
+# Subclass column in reference object
 ref_subclass: "confirmed_subclass"
+
+# Class column in reference object
 ref_class: "class2"
+
+# Sample id column in reference object
 sample_id: "sample_id"
+
+# Donor column in query object
 donor: "donor_name"
+
+# Cells marked to exclude by gene count and doublet score column in query object
 exclude: "exclude2"
+
+# High and low median UMI and median gene cut off for glia/non-neuronal meta cells
 glia_cutoff: "0.15"
+
+# High and low median UMI and median gene cut off for neuronal meta cells
 neuron_cutoff: "0.05"
 
-# For umaps:
+# Subclass colour columnn in reference object
 ref_subclass_color: "confirmed_subclass_color"
