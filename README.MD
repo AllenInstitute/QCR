@@ -21,11 +21,9 @@ This happens using Snakemake which take the Seurat object as input and adds seve
 
 ### Config file:
 ```
-
 Usage: sh <config_file_maker.sh> <path to *.RDS normalized and labelled seurat data location>
 
 Example: sh ./snakemake/config_script/config_yaml.sh /allen/programs/celltypes/workgroups/hct/SEA-AD/RNAseq/QCR/seurat/data/ > config.yaml
-
 ```
 ### Snakemake run:
 
@@ -34,7 +32,6 @@ Example: sh ./snakemake/config_script/config_yaml.sh /allen/programs/celltypes/w
 Note: example config file with default values for all keys except samples, workdir and reference can be found ./snakemake/config_script/config_default.yaml
 2. snakemake -np --use-conda --cores 30 (dry run)
 3. snakemake -p  --use-conda --cores 30 (actual run)
-
 ```
 
 ## Interactive workflow:
@@ -43,7 +40,6 @@ This is realized using Shiny for visualizing the UMAPs and scatter plots from Sn
 
 ```
 COMING SOON ...
-
 ```
 
 ## R WRAPPER:
@@ -52,7 +48,6 @@ The R wrapper is a follow up function to Seurat functions to add QC flags to cel
 
 ```
 COMING SOON ...
-
 ```
 ## License
 The license for this package is available on Github at: https://github.com/AllenInstitute/QCR_HVS/blob/master/LICENSE
