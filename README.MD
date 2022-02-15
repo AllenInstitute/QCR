@@ -34,7 +34,7 @@ Example: sh ./snakemake/config_script/config_yaml.sh /allen/programs/celltypes/w
 ```
 1. Fill in config file values 
 Note: example config file with default values for all keys except samples, workdir and reference can be found under ./snakemake/config_script/config_default.yaml
-2. cd /../
+2. cd ../
 3. snakemake -np --use-conda --cores 30 (dry run)
 4. snakemake -p  --use-conda --cores 30 (actual run)
 ```
