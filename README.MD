@@ -4,6 +4,8 @@
 
 QCR is a workflow for adding several Quality Control (QC) flags to scRNA-seq cells or nuclei which can be used for downstream processing. It consists of three parts, pre-processing, automated workflow and interactive workflow.
 
+![plot](./QCR_workflow.png)
+
 ## Pre-processing:
 
 Performs normalization of seurat object/query object and transfers subclass label from a reference object to seurat object cells. This is a required step as some flags are based on the cell label transfer.
