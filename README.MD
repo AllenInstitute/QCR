@@ -25,16 +25,16 @@ Snakemake workflow which take the normalized and label transferred seurat object
 ```
 cd ../snakemake/config_script/  
 
-Usage: sh <config_file_maker.sh> <path to normalized and labelled seurat data (*.RDS)>
+Usage: sh <config_file_maker.sh> <path to normalized and labelled seurat data (*.RDS)> >  ../config.yaml
 
-Example: sh ./snakemake/config_script/config_yaml.sh /allen/programs/celltypes/workgroups/hct/SEA-AD/RNAseq/QCR/seurat/data/ > config.yaml
+Example: sh ./snakemake/config_script/config_yaml.sh /allen/programs/celltypes/workgroups/hct/SEA-AD/RNAseq/QCR/seurat/data/ > ../config.yaml
 ```
 ### Snakemake run:
 
 ```
-1. Fill in config file values 
+1. cd ../
+2. Fill in config file values 
 Note: example config file with default values for all keys except samples, workdir and reference can be found under ./snakemake/config_script/config_default.yaml
-2. cd ../
 3. snakemake -np --use-conda --cores 30 (dry run)
 4. snakemake -p  --use-conda --cores 30 (actual run)
 ```

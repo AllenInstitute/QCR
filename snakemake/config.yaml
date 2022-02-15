@@ -1,22 +1,15 @@
 samples:
-    H2033038: H2033038 
-    H2133020: H2133020
-
-workdir:   "/allen/programs/celltypes/workgroups/hct/SEA-AD/RNAseq/QCR/snakemake"
-
-reference: "/allen/programs/celltypes/workgroups/rnaseqanalysis/sarojaS/210426_QCR/data/reference_subset.RDS"  
-
-# For rule clustering:
-resolution: "10" 
-
-# For QC_flags:
-ref_subclass: "confirmed_subclass"
-ref_class: "class2"
-sample_id: "sample_id"
-donor: "donor_name"
-exclude: "exclude2"
-glia_cutoff: "0.15"
-neuron_cutoff: "0.05"
-
-# For umaps:
-ref_subclass_color: "confirmed_subclass_color"
+ 	 
+	 H2033038 : H2033038
+	 H2133020 : H2133020
+workdir:
+reference:
+resolution:
+ref_subclass:
+ref_class:
+sample_id:
+donor:
+exclude:
+glia_cutoff:
+neuron_cutoff:
+ref_subclass_color:
