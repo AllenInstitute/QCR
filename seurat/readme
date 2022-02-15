@@ -4,6 +4,6 @@ Notes:
 3. We give these outside snakemake as it is much faster when submitted to hpc
 
 Improvements coming soon:
-1. Error statements to catch of input is not right
+1. Error statements to catch if input is not right
 2. Column names as input to functions
 
