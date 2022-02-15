@@ -1,7 +1,7 @@
 samples:
  	 
-	 H2033038_labelled :
-	 H2133020_labelled :
+	 H2033038 : H2033038
+	 H2133020 : H2133020
 workdir:
 reference:
 resolution:

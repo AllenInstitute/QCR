@@ -7,7 +7,9 @@ echo -e ' \t ';
 for i in $file_names
 do
 	j="${i%.*}"
-	echo -e '\t' $(basename $j) ":"
+	k=$(basename $j)
+	sample=$(echo $k | cut -d"_" -f1)
+	echo -e '\t' ${sample} ":" ${sample}
 done
 echo "workdir:"
 echo "reference:"

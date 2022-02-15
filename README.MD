@@ -10,6 +10,8 @@ Performs normalization of seurat object/query object and transfers subclass labe
 
 
 ```
+cd seurat/
+
 Usage: Rscript <normalize_and_label_transfer_script> <work-dir location> <seurat-object in RDS/Rdata location> <reference-obj in RDS/Rdatalocation>
 
 Example: Rscript ./seurat/scripts/normalize_and_label_transfer_objects.R /allen/programs/celltypes/workgroups/hct/SEA-AD/RNAseq/QCR/seurat/ ./seurat/data/H2033038.RData /allen/programs/celltypes/workgroups/rnaseqanalysis/sarojaS/210426_QCR/data/reference_subset.RDS
@@ -21,6 +23,8 @@ Snakemake workflow which take the normalized and label transferred seurat object
 
 ### Config file:
 ```
+cd ../snakemake/config_script/  
+
 Usage: sh <config_file_maker.sh> <path to normalized and labelled seurat data (*.RDS)>
 
 Example: sh ./snakemake/config_script/config_yaml.sh /allen/programs/celltypes/workgroups/hct/SEA-AD/RNAseq/QCR/seurat/data/ > config.yaml
@@ -30,8 +34,9 @@ Example: sh ./snakemake/config_script/config_yaml.sh /allen/programs/celltypes/w
 ```
 1. Fill in config file values 
 Note: example config file with default values for all keys except samples, workdir and reference can be found under ./snakemake/config_script/config_default.yaml
-2. snakemake -np --use-conda --cores 30 (dry run)
-3. snakemake -p  --use-conda --cores 30 (actual run)
+2. cd /../
+3. snakemake -np --use-conda --cores 30 (dry run)
+4. snakemake -p  --use-conda --cores 30 (actual run)
 ```
 
 ## Interactive workflow:

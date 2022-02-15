@@ -23,7 +23,7 @@ ref_subclass: "confirmed_subclass"
 # Class column in reference object
 ref_class: "class2"
 
-# Sample id column in reference object
+# Sample id column in query object
 sample_id: "sample_id"
 
 # Donor column in query object
@@ -32,10 +32,10 @@ donor: "donor_name"
 # Cells marked to exclude by gene count and doublet score column in query object
 exclude: "exclude2"
 
-# High and low median UMI and median gene cut off for glia/non-neuronal meta cells
+# High and low median UMI and median gene cut off for glia/non-neuronal meta cells in query object
 glia_cutoff: "0.15"
 
-# High and low median UMI and median gene cut off for neuronal meta cells
+# High and low median UMI and median gene cut off for neuronal meta cells in query object
 neuron_cutoff: "0.05"
 
 # Subclass colour columnn in reference object
