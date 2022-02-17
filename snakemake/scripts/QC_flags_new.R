@@ -1,4 +1,4 @@
-# Quality control flag script 
+#Quality control flag script 
 # The script takes -> run dir
 #                  -> query object
 #                  -> ref object
@@ -28,6 +28,7 @@ library(scales)
 library(reticulate)
 suppressMessages(library(dplyr))
 library(tibble)
+library(feather)
 args = commandArgs(trailingOnly = TRUE)
 
 #functions
@@ -40,7 +41,7 @@ Mode <- function(x) {
 
 
 # QCs columns
-QCs <- function(query_object, reference_object, final_object, ref_subclass, ref_class, sample_id, donor_name,exclude, glia_cutoff, neuron_cutoff, resolution_value){
+QCs <- function(query_object, reference_object, final_object, ref_subclass, ref_class, sample_id, donor_name,exclude, glia_cutoff, neuron_cutoff, resolution_value, feather_file){
   
     # clustering
     query_object <- ScaleData(query_object)
@@ -184,7 +185,7 @@ QCs <- function(query_object, reference_object, final_object, ref_subclass, ref_
     
   ## QC6 ##
   query_object_sub <- query_object@meta.data[,c(exclude,"QC2_metacell_class_flag", "QC3_metacell_donor_flag","QC4_metacell_gene_umi_low_flag","QC4_metacell_gene_umi_high_flag","QC5_subclass_prediction_flag")]
-  query_object_sub$exclude2 <- ifelse(query_object_sub$exclude2 == "No", TRUE, FALSE)
+  query_object_sub[,exclude] <- ifelse(query_object_sub[,exclude] == "No", TRUE, FALSE)
   
   query_object_sub <- as.data.frame(query_object_sub)
   #TRUE 0, FALSE 1
@@ -195,10 +196,15 @@ QCs <- function(query_object, reference_object, final_object, ref_subclass, ref_
   
   # add to object
   query_object <- AddMetaData(query_object, query_df_final)
-  
+ 
+  # pulling newly added columns to df
+  query_obj_meta_cols <- query_object@meta.data[,c(sample_id, exclude, "QC2_metacell_class_flag", "QC3_metacell_donor_flag","QC4_metacell_gene_umi_low_flag","QC4_metacell_gene_umi_high_flag","QC5_subclass_prediction_flag", "QC6_total_flag")]   
+
   #saveRDS(query_object, file = final_object)
   seurat2h5ad(query_object, "RNA", "data", ".", final_object)
+  write_feather(query_obj_meta_cols, feather_file)
 }
+
 
 ## TOdo:  Validate the user inputs to the right type
 # input 
@@ -223,6 +229,9 @@ exclude <- args[9]
 glia_cutoff <- args[10]
 neuron_cutoff <- args[11]
 resolution_value <- args[12]
+
+# additional output
+feather_file <- args[13]
   
 # conditions
 # Reading the RDS or Rdata file for reference_object
@@ -234,5 +243,5 @@ if (endsWith(basename(reference_file), ".rds") | endsWith(basename(reference_fil
 
 
 # Actual run
-QCs(query_object, reference_object, final_object, ref_subclass, ref_class, sample_id, donor_name, exclude, glia_cutoff, neuron_cutoff, resolution_value)
+QCs(query_object, reference_object, final_object, ref_subclass, ref_class, sample_id, donor_name, exclude, glia_cutoff, neuron_cutoff, resolution_value, feather_file)
 

@@ -2,16 +2,17 @@ configfile: "config.yaml"
 
 rule all:
 	input:
-		expand("data/QCs/{sample}_QCed.h5ad", sample = config["samples"])
+		expand("data/QCs/{sample}_QCed.{ext}", sample = config["samples"], ext=["h5ad", "feather"])
 
 rule QC_flags:		
 	input: 
 		query="../seurat/data/{sample}_labelled.RDS"
 	output:
-		final="data/QCs/{sample}_QCed.h5ad"
+		final="data/QCs/{sample}_QCed.h5ad",
+		feather="data/QCs/{sample}_QCed.feather"
 		
 	shell:
-		"Rscript scripts/QC_flags_new.R {config[workdir]} {input.query} {config[reference]} {output.final} {config[ref_subclass]} {config[ref_class]} {config[sample_id]} {config[donor]} {config[exclude]} {config[glia_cutoff]} {config[neuron_cutoff]} {config[resolution]}"
+		"Rscript scripts/QC_flags_new.R {config[workdir]} {input.query} {config[reference]} {output.final} {config[ref_subclass]} {config[ref_class]} {config[sample_id]} {config[donor]} {config[exclude]} {config[glia_cutoff]} {config[neuron_cutoff]} {config[resolution]} {output.feather}"
 
 
 	
