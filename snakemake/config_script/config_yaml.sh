@@ -3,13 +3,13 @@ data_path=$1"/*labelled.RDS"
 file_names=`ls $data_path`
 
 echo -e "samples:"	
-echo -e ' \t '; 
+# echo -e ' \t '; 
 for i in $file_names
 do
 	j="${i%.*}"
 	k=$(basename $j)
-	sample=$(echo $k | cut -d"_" -f1)
-	echo -e '\t' ${sample} ":" ${sample}
+	sample=$(echo $k | rev | cut -d "." -f 2) 
+	echo -e '\t'${sample} ":" ${sample}
 done
 echo "workdir:"
 echo "reference:"
