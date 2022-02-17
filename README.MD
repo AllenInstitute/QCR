@@ -49,7 +49,7 @@ Shiny app for visualizing the UMAPs and scatter plots from Snakemake workflow, a
 COMING SOON ...
 ```
 
-## R WRAPPER:
+## QCR R package:
 
 A follow up function to Seurat functions to add QC flags to scRNA cells when analyzing data with Seurat
 
