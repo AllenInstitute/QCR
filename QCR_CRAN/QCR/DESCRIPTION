@@ -1,0 +1,22 @@
+Package: QCR
+Title: What the Package Does (One Line, Title Case)
+Version: 0.1
+Authors@R: 
+    person("Nelson", "Johansen", , "nelson.johansen@alleninstitute.org", role = c("aut", "cre"))
+    person("Saroja", "Somasundaram", , "sarojas@alleninstitute.org", role = c("aut", "cre"))
+Description: QCR is a workflow for adding several Quality Control (QC) flags to scRNA-seq cells or nuclei which can be used for downstream processing.
+License: use_mit_license()
+Depends: data.table,
+    Rdpack,
+    Seurat,
+    tidyr,
+    scales,
+    dplyr,
+    tibble,
+    feather
+Suggests: knitr, 
+    rmarkdown, 
+    testthat
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
