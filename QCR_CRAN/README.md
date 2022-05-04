@@ -10,7 +10,7 @@ rnaseq.data = RunPCA(rnaseq.data, features = VariableFeatures(object = rnaseq.da
 rnaseq.data = FindNeighbors(rnaseq.data, dims = 1:30)
 rnaseq.data = FindClusters(rnaseq.data, resolution = 0.5)
 rnaseq.data = RunUMAP(rnaseq.data, dims = 1:30)
-rnaseq.data = QCR(rnaseq.data=rnaseq.data,                             ## A Seurat object
+rnaseq.data = QCR(rnaseq.data=rnaseq.data,                         ## A Seurat object
                   class.col="class",                               ## Column name for class level annotation
                   class.cutoff=0.75,                               ## Percent of class homogeneity within each cluster to determine low-quality
                   neuron.class.id="Neuron",                        ## Within `class.col` the value for neurons
