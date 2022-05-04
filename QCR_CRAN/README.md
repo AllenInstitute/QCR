@@ -2,6 +2,7 @@
 
 ## Example:
 ```
+## Standard Seurat workflow
 rnaseq.data = CreateSeuratObject(counts = mat, meta.data = meta.data)
 rnaseq.data = NormalizeData(rnaseq.data, normalization.method = "LogNormalize", scale.factor = 1e6)
 rnaseq.data = FindVariableFeatures(rnaseq.data, selection.method = "vst", nfeatures = 2000)
@@ -10,6 +11,7 @@ rnaseq.data = RunPCA(rnaseq.data, features = VariableFeatures(object = rnaseq.da
 rnaseq.data = FindNeighbors(rnaseq.data, dims = 1:30)
 rnaseq.data = FindClusters(rnaseq.data, resolution = 0.5)
 rnaseq.data = RunUMAP(rnaseq.data, dims = 1:30)
+## Add QCR flags!
 rnaseq.data = QCR(rnaseq.data=rnaseq.data,                         ## A Seurat object
                   class.col="class",                               ## Column name for class level annotation
                   class.cutoff=0.75,                               ## Percent of class homogeneity within each cluster to determine low-quality
