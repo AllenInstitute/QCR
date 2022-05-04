@@ -20,6 +20,5 @@ rnaseq.data = QCR(rnaseq.data=rnaseq.data,                             ## A Seur
                   class.col.score="class.prediction.score",        ## Column name for class annotation likelihood
                   subclass.col.score="subclass.prediction.score",  ## Column name for subclass annotation likelihood
                   label.confidence.threshold=0.7,                  ## Likelihood value to determine low-confidence cell type annotation
-                  resolution.value=10                              ## For Seurat:FindClusters if not already run.
-                  )
+                  resolution.value=10)                             ## For Seurat:FindClusters if not already run.
 ```
