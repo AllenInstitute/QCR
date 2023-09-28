@@ -1,15 +1,15 @@
 # list of sample keys and values
 samples:
-#        H2033038: H2033038 
-#        H2133020: H2133020
+#        H20XXXXX: H20XXXXX 
+#        H21XXXXX: H21XXXXX
 
 # workdir absolute path
 workdir:
-# "/allen/programs/celltypes/workgroups/hct/SEA-AD/RNAseq/QCR/snakemake"
+# "your-location/QCR/snakemake"
 
 # reference dataset absolute path
 reference:
-# "/allen/programs/celltypes/workgroups/rnaseqanalysis/sarojaS/210426_QCR/data/reference_subset.RDS"  
+# "your-ref-data-location/reference_subset.RDS"  
 
 # For rule clustering:
 # Resolution for Seurat clustering (https://satijalab.org/seurat/articles/pbmc3k_tutorial.html#cluster-the-cells-1)
