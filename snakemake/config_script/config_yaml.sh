@@ -1,5 +1,5 @@
 #!/bin/bash
-data_path=$1"/*labelled.RDS"
+data_path=$1"/*.RDS"
 file_names=`ls $data_path`
 
 echo -e "samples:"	
