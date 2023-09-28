@@ -41,14 +41,6 @@ Note: example config file with default values for all keys except samples, workd
 4. snakemake -p  --use-conda --cores 30 (actual run)
 ```
 
-## Interactive QC:
-
-Shiny app for visualizing the UMAPs and scatter plots from Snakemake workflow, and also add user defined flags to cells in the Seurat object by brushing
-
-```
-COMING SOON ...
-```
-
 ## QCR R package:
 
 A follow up function to Seurat functions to add QC flags to scRNA cells when analyzing data with Seurat
