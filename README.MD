@@ -10,6 +10,9 @@ Below is the QCR R package, a follow up function to Seurat functions to add QC f
 
 ### Example:
 ```
+library(QCR)
+library(Seurat)
+
 ## Standard Seurat workflow
 rnaseq.data = CreateSeuratObject(counts = mat, meta.data = meta.data)
 rnaseq.data = NormalizeData(rnaseq.data, normalization.method = "LogNormalize", scale.factor = 1e6)
